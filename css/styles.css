@@ -1,0 +1,223 @@
+/*---Color Wheel*---/
+header & border bottom - #082324
+
+
+/*-----Global Styling------*/
+*{
+  box-sizing: border-box;
+}
+
+/*----- Base Element Styling------*/
+
+body{
+  font-family: 'Merriweather', serif;
+  font-weight: 200;
+}
+
+.subWrapper{
+  background-color: #482D21;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.subText{
+  border-bottom: 5px solid #082324;
+  padding-bottom: 1em;
+  margin-bottom: .2em;
+}
+
+.basicInfo > div{
+  display: flex;
+  flex-direction: column;
+}
+
+form,
+hr{
+  border-top: 3px solid #082324;
+  margin: 0;
+  padding: 0;
+}
+
+form{
+  background-color: #94796B;
+  padding: 1em;
+}
+
+fieldset{
+  border: none;
+  margin: 0;
+  padding: .5em;
+}
+
+legend{
+  margin: 1em 1em 1em 0;
+  padding: .5em 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+label{
+  display: inline-block;
+}
+
+/*-----Headings Styling------*/
+
+h1{
+  background-color: #082324;
+  font-size: 1.8em;
+  margin: 0 auto;
+  padding: .8em 0;
+  text-transform: uppercase;
+}
+
+h2{
+  margin-top: 0;
+}
+
+/*-----Layout Styling------*/
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 42em;
+}
+
+/*-----DRY Styling------*/
+
+.ctrAlign{
+  text-align: center;
+}
+
+.formField{
+  width: 100%;
+  margin: 0;
+  background-color: #F2F2F5;
+  height: 2.5em;
+}
+
+.br{
+  border-radius: 5px;
+}
+
+.txt-color {
+  color: #fff;
+}
+
+/*-----Button Styling------*/
+.btn{
+  width: 100%;
+  background-color: #482D21;
+  border: 3px solid #000;
+  font-size: 1.5em;
+  padding: .6em;
+}
+
+.btn:active,
+.btn:visited{
+  color: #000;
+  background-color: #005555;
+}
+
+.btn:hover{
+  color: #fff;
+  background-color: #005555;
+  cursor: pointer;
+}
+
+/*----- Base Form Styling------*/
+
+div + div,
+label + input,
+.news{
+  margin: 1em 0;
+}
+
+.form-title{
+  padding-top: 1em;
+  margin-top: 0;
+}
+
+.basicInfo label{
+  margin: .5em 0;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #482D21;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #482D21;
+  outline: #482D21;
+  background-color: #fcfebc;
+  transition: background-color .7s ease-out;
+}
+
+#zipCode{
+  max-width: 50%;
+}
+/*----- Attribute Form Styling------*/
+
+input[placeholder="Required"]{
+  text-align: right;
+  padding-right: 1em;
+}
+
+input[placeholder="city"],
+textarea[placeholder="Write here..."]{
+  padding-left: .5em;
+}
+
+input[name="news"],
+input[name="format"]{
+  margin-right: 1em;
+}
+
+textarea[id="other"]{
+  height: 7em;
+}
+
+button[name="submit_button"]{
+  margin-top: 1.5em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+
+/*---------------------------------------
+*****MEDIA QUERY STYLING*******
+----------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+  .container{
+    width: 60%;
+  }
+
+  .inner-flex{
+    justify-content: flex-start;
+  }
+
+  .basicInfo > .inner-flex{
+    flex-direction: row;
+    margin-bottom: 1em;
+  }
+
+  .basicInfo label,
+  .basicInfo {
+    flex-basis: 25%;
+    margin: auto 0;
+  }
+
+  .basicInfo input,
+  .basicInfo select{
+    flex: 1;
+    flex-basis: 75%;
+  }
+
+    #zipCode {
+     max-width: 25%;
+ }
+}
