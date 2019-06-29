@@ -10,46 +10,35 @@
     </head>
     <body>
       <header class="fullWidth">
-          <h1 class="txt-color ctrAlign">The Code Review</h1>
+          <h1 class="txt-color ctrAlign">Save Our Planet</h1>
       </header>
           <div class="container">
             <div class="subWrapper txt-color">
-              <h2 class="ctrAlign">Signup for our newsletter</h2>
+              <h2 class="ctrAlign">Take a Stand With Us</h2>
               <p class="subText ctrAlign">
-              Get the latest news on how your code is
-              doing right in your inbox.
+              See how you can get involved in rescuing our precious green earth!
              </p>
            </div>
             <form action="index.html" method="post">
                 <fieldset class="basicInfo">
                     <legend class="form-title txt-color">Contact Information</legend>
 
-                    <div class="inner-flex">
+                    <div class="inner-flex1">
                       <label for="fullName">Full Name</label>
                       <input class="formField br" type="text" id="fullName" name="user-name" placeholder="Required" required/>
-                    </div>
-
-                    <div class="inner-flex">
+                  
                       <label for="myEmail">Email Address</label>
                       <input class="formField br" type="email" id="myEmail" name="user-email" placeholder="Required" required/>
-                    </div>
-
-                    <div class="inner-flex">
+                                        
                       <label for="phone">Phone Number</label>
                       <input class="formField br" type="tel" id="phone" name="user-number"/>
-                    </div>
-
-                    <div class="inner-flex">
+                                        
                       <label for="location">Street Address</label>
                       <input class="formField br" type="text" id="location" name="user-address"/>
-                    </div>
-
-                    <div class="inner-flex">
+                                       
                       <label for="area">City</label>
                       <input class="formField br" type="text" id="area" name="user-city" placeholder="city"/>
-                    </div>
-
-                    <div class="inner-flex">
+                                     
                       <label for="statesId">State</label>
                       <select class="formField br" id="statesId" name="user-state">
                             <option selected="" hidden="" disabled="">Choose States</option>
@@ -105,48 +94,51 @@
                           	<option value="WI">Wisconsin</option>
                           	<option value="WY">Wyoming</option>
                           </select>
-                        </div>
-
-                        <div class="inner-flex">
+                                           
                           <label for="zipCode">Zip Code</label>
                           <input class="formField br"  type="number" id="zipCode" name="zipcode">
-                        </div>
 
+                        </div>
                    </fieldset>
                     <hr />
                     <fieldset class="newsInfo">
 
-                      <legend class="form-title txt-color">Newsletter</legend>
-                      <label class="news">Select the newletters you would like to receive</label>
+                      <legend class="form-title txt-color">Locations</legend>
+                      <h3 class="news">Areas where you can volunteer and make a change!</h3>
 
-                      <div class="inner-flex">
-                        <input type="checkbox" id="html" name="news" value="html">
-                        <label for="html" >HTML News</label>
+                      <div class="inner-flex2">
+
+                        <label for="waters" >
+                          <input type="checkbox" id="waters" name="news" value="waters">
+                          Save our Waters
+                        </label>
+                         
+                        <label for="grasslands">
+                          <input type="checkbox" id="grasslands" name="news" value="grasslands">
+                          Save our Grasslands
+                        </label>
+                         
+                        <label for="jungles">
+                          <input type="checkbox" id="jungles" name="news" value="jungles">
+                          Save our Jungles
+                        </label>
+                     
+
+                      <h3 class="news">Location Format</h3>
+                        
+                        <label for="codeSyntax">
+                          <input type="radio" id="codeSyntax" name="format" value="html5">
+                          HTML
+                        </label>
+                  
+                        <label for="normal">
+                          <input type="radio" id="normal" name="format" value="plain">
+                          Plain text
+                        </label>
+                     
                       </div>
 
-                      <div class="inner-flex">
-                        <input type="checkbox" id="css" name="news" value="css">
-                        <label for="css">CSS News</label>
-                      </div>
-
-                      <div class="inner-flex">
-                        <input type="checkbox" id="javascript" name="news" value="javascript">
-                        <label for="javascript">JavaScript News</label>
-                      </div>
-
-                      <label class="news">Newsletter Format</label>
-
-                      <div class="inner-flex">
-                        <input type="radio" id="codeSyntax" name="format" value="html5">
-                        <label for="codeSyntax">HTML</label>
-                      </div>
-
-                      <div class="inner-flex">
-                        <input type="radio" id="normal" name="format" value="plain">
-                        <label for="normal">Plain text</label>
-                      </div>
-
-                      <label for="other" class="news">Other topics you'd like to hear about</label>
+                      <h3 for="other" class="news"> Other topics you'd like to hear about</h3>
                       <textarea class="formField fullWidth br" id="other" name="name" placeholder="Write here..."></textarea>
 
                       <button class="btn fullWidth txt-color br" type="submit" name="submit_button">Sign Up</button>

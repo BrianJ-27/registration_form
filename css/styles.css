@@ -26,11 +26,6 @@ body{
   margin-bottom: .2em;
 }
 
-.basicInfo > div{
-  display: flex;
-  flex-direction: column;
-}
-
 form,
 hr{
   border-top: 3px solid #082324;
@@ -75,12 +70,23 @@ h2{
   margin-top: 0;
 }
 
+h3{
+  font-weight: inherit;
+  font-size: 1.1em;
+}
+
 /*-----Layout Styling------*/
 
 .container{
   width: 90%;
   margin: 0 auto;
   max-width: 42em;
+}
+
+.inner-flex1,
+.inner-flex2{
+  display: flex;
+  flex-direction: column;
 }
 
 /*-----DRY Styling------*/
@@ -127,27 +133,24 @@ h2{
 
 /*----- Base Form Styling------*/
 
-div + div,
-label + input,
-.news{
-  margin: 1em 0;
-}
-
 .form-title{
   padding-top: 1em;
   margin-top: 0;
 }
 
-.basicInfo label{
-  margin: .5em 0;
+.inner-flex1 > label,
+.inner-flex2 > label{
+  margin: 1em 0;
 }
+
+.inner-flex1 > input:last-child{
+  margin-bottom: 1em;
+}
+
+
 
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 5px #482D21;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #482D21;
   outline: #482D21;
   background-color: #fcfebc;
   transition: background-color .7s ease-out;
@@ -196,13 +199,18 @@ input[type=number]::-webkit-outer-spin-button {
     width: 60%;
   }
 
-  .inner-flex{
+  .inner-flex1{
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
 
-  .basicInfo > .inner-flex{
-    flex-direction: row;
+  .inner-flex1 > label + input{
     margin-bottom: 1em;
+  }
+
+  .inner-flex1 > input:last-child{
+    margin-top: 1em;
   }
 
   .basicInfo label,
